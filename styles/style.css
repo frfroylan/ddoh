@@ -3,52 +3,33 @@
 	padding: 0;
 }
 body{
-	background-color: tomato;
-}
-.header{
-	background: white;
-	position: absolute;
-	z-index: -1;
-	height: 40vh;
-	width: 100vw;
-}
-.title{
-	padding-top: 80px;
-	text-align: center;
-	background: transparent;
+	background-color: lightblue;
 }
 .flex-container{
 	display: flex;
-	width: 80vw;
+	width: 90vw;
 	margin: 0 auto;
-	padding-top: 200px;
 	flex-flow: row wrap;
 	justify-content: center;
+	margin-top: 20px;
 }
 .flex-items{
-	width: 300px;
-	height: 300px;
+	width: 350px;
+	height: 350px;
 	border: 1px solid black;
-}
-.flex-items:nth-child(1){ 
-	border: 2px solid blue;
-	order: 2; 
-}
-.flex-items:nth-child(2){ 
-	border: 2px solid green;
-	order: 3; 
-}
-.flex-items:nth-child(3){ 
-	border: 2px solid red;
-	order: 4; 
-}
-.flex-items:nth-child(4){ 
-	border: 2px solid #333;
-	order: 5; 
+	order: 1;
 }
 i{
 	visibility: hidden;
 	float: right;
+}
+.header{
+	height: 50px;
+	background-color: #333;
+}
+.headerText{
+	margin-left: 40px;
+	color: white;
 }
 
 /*img{
@@ -58,3 +39,14 @@ i{
 	-webkit-filter: grayscale(100%);
 	-webkit-transition: -webkit-filter 300ms linear;
 }*/
+.everest{
+	background: linear-gradient(
+	      rgba(0, 0, 0, 0.6),
+	      rgba(0, 0, 0, 0.6)
+	    ),
+    url(http://edugeography.com/images/mount-everest/mount-everest-04.jpg);
+  background-size: cover;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}

@@ -1,31 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>DDH</title>
+	<title>DDOH</title>
 	<link rel="stylesheet" href="styles/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 <body>
-	
+	<div class="header">
+		<h1 class="headerText">Day Dreaming of Hiking</h1>
+	</div>
 	<div class="flex-container">
-		<div class="flex-items"><i class="fa fa-reply fa-2x"></i></div>
-		<div class="flex-items"><i class="fa fa-reply fa-2x"></i></div>
-		<div class="flex-items"><i class="fa fa-reply fa-2x"></i></div>
-		<div class="flex-items"><i class="fa fa-reply fa-2x"></i></div>
+		<div class="flex-items everest">
+
+			<i class="fa fa-reply fa-2x"></i>
+			
+		</div>
+		<div class="flex-items"><i class="fa fa-reply fa-2x"></i>2</div>
+		<div class="flex-items"><i class="fa fa-reply fa-2x"></i>3</div>
+		<div class="flex-items"><i class="fa fa-reply fa-2x"></i>4</div>
+		<div class="flex-items"><i class="fa fa-reply fa-2x"></i>5</div>
+		<div class="flex-items"><i class="fa fa-reply fa-2x"></i>6</div>
+		<div class="flex-items"><i class="fa fa-reply fa-2x"></i>7</div>
+		<div class="flex-items"><i class="fa fa-reply fa-2x"></i>8</div>
 	</div>
 </body>
-
 <script>
 $(document).ready(function(){
+
 	$(".flex-items").click(function(){
+		console.log(this.css);
 		$(this)
 		.animate({
-			width: '100%',
-			height: '700px'},{
+			width: '100vw',
+			height: '100vh'},{
 			duration: 300,
 			ease: "slow"})	
-		.css("order", "1");
+		.css("order", "0");
 		
 		i = $(this).children();
 		$(i).css("visibility" ,"initial");
@@ -38,11 +49,10 @@ $(document).ready(function(){
 			height: '300px'},{
 			duration: 300,
 			ease: "linear"})
-			.css("order", "hidden");
+			.css("order", "1");
+			$(this).css("visibility" ,"hidden");
 	});
-
 });
 </script>
-
 </html>
 
