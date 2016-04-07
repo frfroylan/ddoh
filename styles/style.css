@@ -1,52 +1,114 @@
 *{
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 body{
-	background-color: lightblue;
+    background-color: lightblue;
 }
+nav{
+    background-color: lightgreen;
+    width: 100%;
+    height: 150px;
+}
+/*** FLEX CONTAINER **/
 .flex-container{
-	display: flex;
-	width: 90vw;
-	margin: 0 auto;
-	flex-flow: row wrap;
-	justify-content: center;
-	margin-top: 20px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    width: 75%;
+    height: 150%;
+    margin: 0 auto;
+    margin-top: -50px;
+    background-color: lightgrey;
 }
+/*** FLEX ITEMS **/
 .flex-items{
-	width: 350px;
-	height: 350px;
-	border: 1px solid black;
-	order: 1;
+    border: 1px solid black;
+    overflow: hidden;
+    flex: 1 0;
+    transition:all .7s linear;
 }
-i{
-	visibility: hidden;
-	float: right;
-}
-.header{
-	height: 50px;
-	background-color: #333;
-}
-.headerText{
-	margin-left: 40px;
-	color: white;
+.flex-header{
+    color: black;
+    font-size: 30px;
 }
 
-/*img{
+/*** FLEX EXPAND **/
+.expand {
+    background-color: tomato;
+    flex-grow: 10;
+    padding-bottom: 40px;
+}
+/*** INFO-FLEX  **/
+.info-flex{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 5px;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+}
+.info-flex-child{
+    width: 49%;
+    height: 27%;
+    border: 1px solid black;
+    display: none;
+    transition:all .7s linear;
+}
+.map{
 	width: 100%;
-	height: auto;
-	filter: grayscale(100%);
-	-webkit-filter: grayscale(100%);
-	-webkit-transition: -webkit-filter 300ms linear;
-}*/
-.everest{
-	background: linear-gradient(
-	      rgba(0, 0, 0, 0.6),
-	      rgba(0, 0, 0, 0.6)
-	    ),
-    url(http://edugeography.com/images/mount-everest/mount-everest-04.jpg);
-  background-size: cover;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
+	height: 100%;
+}
+.graph{
+	width: 100%;
+	height: 100%;
+}
+
+
+i{
+    color: white;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    margin-top: -40px;
+    margin-bottom: 5px;
+    float: right;
+    visibility: hidden;
+}
+i:hover {
+    color: black;
+}
+h2{
+    margin-top: 8px;
+    margin-left: 8px;
+}
+
+
+@media (max-width: 720px) {
+    .flex-container{
+        width: 90%;
+        flex-flow: column wrap;
+        overflow: hidden;
+    }
+    .flex-items{
+	    width: 99%;
+	}
+    .info-flex{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        visibility: hidden;
+
+    }
+    .info-flex-child{
+        height: 55%;
+        width: 100%;
+    }
+    .expand {
+        background-color: tomato;
+        flex-grow: 15;
+        overflow-y: scroll;
+    }
 }
